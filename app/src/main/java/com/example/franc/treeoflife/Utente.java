@@ -1,21 +1,19 @@
 package com.example.franc.treeoflife;
 
-public class Utente {
+import java.io.Serializable;
+
+public class Utente implements Serializable {
     private String nome;
     private String cognome;
     private String tipo;
-    private String user;
-    private String password;
 
     public Utente() {
     }
 
-    public Utente(String nome, String cognome, String tipo, String user, String password) {
+    public Utente(String nome, String cognome, String tipo) {
         this.nome = nome;
         this.cognome = cognome;
         this.tipo = tipo;
-        this.user = user;
-        this.password = password;
     }
 
     public String getNome() {
@@ -30,13 +28,6 @@ public class Utente {
         return tipo;
     }
 
-    public String getUser() {
-        return user;
-    }
-
-    public String getPassword() {
-        return password;
-    }
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -50,13 +41,6 @@ public class Utente {
         this.tipo = tipo;
     }
 
-    public void setUser(String user) {
-        this.user = user;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 
     @Override
     public String toString() {
@@ -64,10 +48,6 @@ public class Utente {
                 "nome='" + nome + '\'' +
                 ", cognome='" + cognome + '\'' +
                 ", tipo='" + tipo + '\'' +
-                ", user='" + user + '\'' +
-                ", password='" + password + '\'' +
                 '}';
     }
-
-
 }
