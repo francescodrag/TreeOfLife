@@ -43,7 +43,7 @@ public class LoginActivity extends Activity {
             Utente missionario = new Utente("Pino", "Mauro", "M");//M=missionario
             Intent intent = new Intent(this, HomeActivity.class);
             Bundle extras = new Bundle();
-            extras.putParcelable("object_key", missionario);
+            extras.putSerializable("Utente",missionario);
             intent.putExtras(extras);
             startActivity(intent);
         }
