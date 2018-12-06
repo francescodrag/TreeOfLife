@@ -1,3 +1,5 @@
+package com.example.franc.treeoflife;
+
 public class Utente {
     private String nome;
     private String cognome;
@@ -66,6 +68,6 @@ public class Utente {
                 ", password='" + password + '\'' +
                 '}';
     }
-    
+
 
 }

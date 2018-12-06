@@ -4,9 +4,10 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
+import java.util.ArrayList;
 
 public class LoginActivity extends Activity {
-
+    ArrayList<Utente> utenti;
     TextView Username, Password;
     Button Login;
 
