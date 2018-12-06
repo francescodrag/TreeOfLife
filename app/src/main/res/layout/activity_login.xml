@@ -14,27 +14,25 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/userName_Login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
+            android:hint="Username"
+            android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/password_Login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
+            android:hint="Password"
+            android:inputType="textPassword" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
