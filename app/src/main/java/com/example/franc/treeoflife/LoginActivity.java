@@ -50,15 +50,19 @@ public class LoginActivity extends Activity {
         else if (Username.getText().toString().toUpperCase().equals("SOSTENITORE") || Password.getText().toString().toUpperCase().equals("SOSTENITORE"))
         {
             Utente sostenitore = new Utente("Claudio", "Cassese", "S");//S=sostenitore a distanza
-            Intent intent=new Intent(this,HomeActivity.class);
-            intent.putExtra("Utente", sostenitore);
+            Intent intent = new Intent(this, HomeActivity.class);
+            Bundle extras = new Bundle();
+            extras.putSerializable("Utente",sostenitore);
+            intent.putExtras(extras);
             startActivity(intent);
         }
         else if (Username.getText().toString().toUpperCase().equals("VOLONTARIO") || Password.getText().toString().toUpperCase().equals("VOLONTARIO"))
         {
             Utente volontario = new Utente("Francesco", "Napolitano", "V");//V=sostenitore volontario
-            Intent intent=new Intent(this,HomeActivity.class);
-            intent.putExtra("Utente", volontario);
+            Intent intent = new Intent(this, HomeActivity.class);
+            Bundle extras = new Bundle();
+            extras.putSerializable("Utente",volontario);
+            intent.putExtras(extras);
             startActivity(intent);
         }
     }
