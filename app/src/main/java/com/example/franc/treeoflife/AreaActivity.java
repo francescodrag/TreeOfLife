@@ -28,9 +28,10 @@ public class AreaActivity extends Activity {
         Cognome.setTextSize(25);
         checkButton(utente);
 
+
     }
 
-    @SuppressLint("SetTextI18n")
+
     private void checkButton(Utente utente){
         if(utente.getTipo().equals("M")){
             button.setText("Richiedi fondi");
@@ -47,7 +48,8 @@ public class AreaActivity extends Activity {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    Intent intent=new Intent(AreaActivity.this,LeMieAdozioniActivity.class);
+                    startActivity(intent);
                 }
             });
 
@@ -66,4 +68,5 @@ public class AreaActivity extends Activity {
         if(extras!=null)
             utente = (Utente) extras.getSerializable("Utente");
     }
+
 }

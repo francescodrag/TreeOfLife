@@ -29,8 +29,7 @@
             android:layout_weight="1"
             android:background="#0F5709"
             android:fontFamily="sans-serif"
-            android:text="Home"
-            android:textColor="#0624D6" />
+            android:text="Home" />
 
         <Button
             android:id="@+id/lavora_Home"
