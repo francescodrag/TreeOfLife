@@ -23,7 +23,8 @@
         <activity android:name=".LavoraConNoiActivity" />
         <activity android:name=".RichiediFondiActivity" />
         <activity android:name=".InviaDoniActivity" />
-        <activity android:name=".OrganizzaIncontroActivity"></activity>
+        <activity android:name=".OrganizzaIncontroActivity" />
+        <activity android:name=".ContattiActivity"></activity>
     </application>
 
 </manifest>
