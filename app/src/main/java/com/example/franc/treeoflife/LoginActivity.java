@@ -14,7 +14,7 @@ public class LoginActivity extends Activity {
 
     TextView Username, Password;
     Button Login;
-    ProgressDialog progressDialog;
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class LoginActivity extends Activity {
                     e.printStackTrace();
                 }
 
-                progressDialog.dismiss();
+
             }
         });
 
@@ -43,13 +43,13 @@ public class LoginActivity extends Activity {
         Username = findViewById(R.id.username_Login);
         Password = findViewById(R.id.password_Login);
         Login = findViewById(R.id.login_Login);
-        progressDialog = new ProgressDialog(LoginActivity.this);
+        progressBar=findViewById(R.id.progressBar);
+        progressBar.setVisibility(View.INVISIBLE);
     }
 
     private void login() throws InterruptedException {
 
-        progressDialog.setMessage("Login in corso...");
-        progressDialog.show();
+
 
 
         if (Username.getText().toString().toUpperCase().equals("MISSIONARIO") || Password.getText().toString().toUpperCase().equals("MISSIONARIO"))
