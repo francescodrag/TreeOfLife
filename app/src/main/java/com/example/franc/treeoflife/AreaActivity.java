@@ -57,7 +57,7 @@ public class AreaActivity extends Activity {
     private void setupView(){
         Nome = findViewById(R.id.nome_Area);
         Cognome = findViewById(R.id.cognome_Area);
-        button = findViewById(R.id.button_Area);
+        button = findViewById(R.id.Button_Area);
     }
 
     private void getUtente(){
