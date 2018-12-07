@@ -22,18 +22,16 @@ public class LoginActivity extends Activity {
         setContentView(R.layout.activity_login);
 
         setupViews();
+        progressBar.setVisibility(View.INVISIBLE);
 
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 try {
                     login();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-
-
             }
         });
 
@@ -44,13 +42,11 @@ public class LoginActivity extends Activity {
         Password = findViewById(R.id.password_Login);
         Login = findViewById(R.id.login_Login);
         progressBar=findViewById(R.id.progressBar);
-        progressBar.setVisibility(View.INVISIBLE);
     }
 
     private void login() throws InterruptedException {
 
-
-
+        progressBar.setVisibility(View.VISIBLE);
 
         if (Username.getText().toString().toUpperCase().equals("MISSIONARIO") || Password.getText().toString().toUpperCase().equals("MISSIONARIO"))
         {
@@ -74,7 +70,6 @@ public class LoginActivity extends Activity {
         Bundle extras = new Bundle();
         extras.putSerializable("Utente",utente);
         intent.putExtras(extras);
-        //Thread.sleep(2000);
         startActivity(intent);
     }
 }

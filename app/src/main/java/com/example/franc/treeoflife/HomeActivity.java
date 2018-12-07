@@ -3,7 +3,9 @@ package com.example.franc.treeoflife;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -11,6 +13,7 @@ public class HomeActivity extends Activity {
 
     Utente utente;
     Button HomePage, LavoraConNoi, AdottaOra;
+    ImageView Area, Logo;
     TextView Contatti, Aiuto, Faq;
 
     @Override
@@ -19,12 +22,61 @@ public class HomeActivity extends Activity {
         setContentView(R.layout.activity_home);
 
         setupView();
-
         getUtente();
 
         Toast.makeText(HomeActivity.this, "Benvenuto, "+utente.getNome()+" "+utente.getCognome()+".", Toast.LENGTH_LONG).show();
 
+        LavoraConNoi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        AdottaOra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        Contatti.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        Aiuto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        Faq.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        Logo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        Area.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                inviaUtente(utente);
+            }
+        });
+
         }
+
 
     private void setupView() {
         HomePage = findViewById(R.id.home_Home);
@@ -33,6 +85,8 @@ public class HomeActivity extends Activity {
         Contatti = findViewById(R.id.contatti_Home);
         Aiuto = findViewById(R.id.aiuto_Home);
         Faq = findViewById(R.id.faq_Home);
+        Area = findViewById(R.id.area_Home);
+        Logo = findViewById(R.id.logo_Home);
     }
 
         private void getUtente(){
@@ -41,5 +95,13 @@ public class HomeActivity extends Activity {
             if(extras!=null)
                 utente = (Utente) extras.getSerializable("Utente");
         }
+
+    private void inviaUtente(Utente utente) {
+        Intent intent = new Intent(HomeActivity.this, AreaActivity.class);
+        Bundle extras = new Bundle();
+        extras.putSerializable("Utente",utente);
+        intent.putExtras(extras);
+        startActivity(intent);
     }
+}
 
