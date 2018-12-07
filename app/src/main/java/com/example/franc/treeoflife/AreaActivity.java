@@ -16,59 +16,65 @@ public class AreaActivity extends Activity {
     Utente utente;
     TextView Nome, Cognome;
     Button button;
-
+    Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_area);
 
-        getUtente();
         setupView();
+        getUtente();
+
 
         Nome.setText(utente.getNome());
         Nome.setTextSize(25);
         Cognome.setText(utente.getCognome());
         Cognome.setTextSize(25);
-        checkButton(utente);
+        checkButton(utente.getTipo());
 
         LavoraConNoi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AreaActivity.this, LavoraConNoiActivity.class));
+                intent=new Intent(AreaActivity.this, LavoraConNoiActivity.class);
+                inviaUtente(utente);
             }
         });
 
         AdottaOra.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AreaActivity.this, AdottaOraActivity.class));
+                intent=new Intent(AreaActivity.this, AdottaOraActivity.class);
+                inviaUtente(utente);
             }
         });
 
         Logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AreaActivity.this, HomeActivity.class));
+               intent=new Intent(AreaActivity.this, HomeActivity.class);
+                inviaUtente(utente);
             }
         });
 
         HomePage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AreaActivity.this, HomeActivity.class));
+                intent=new Intent(AreaActivity.this, HomeActivity.class);
+                inviaUtente(utente);
             }
         });
     }
 
     @SuppressLint("SetTextI18n")
-    private void checkButton(Utente utente){
-        if(utente.getTipo().equals("M")){
+    private void checkButton(String tipo){
+        if(tipo.equals("M")){
             button.setText("Richiedi fondi");
             button.setTextSize(25);
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startActivity(new Intent(AreaActivity.this, RichiediFondiActivity.class));
+                    intent=new Intent(AreaActivity.this, RichiediFondiActivity.class);
+                    inviaUtente(utente);
                 }
             });
         }else{
@@ -77,18 +83,19 @@ public class AreaActivity extends Activity {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent=new Intent(AreaActivity.this,LeMieAdozioniActivity.class);
-                    startActivity(intent);
+                    intent=new Intent(AreaActivity.this,LeMieAdozioniActivity.class);
+                    inviaUtente(utente);
                 }
             });
 
         }
+
     }
 
     private void setupView(){
         Nome = findViewById(R.id.nome_Area);
         Cognome = findViewById(R.id.cognome_Area);
-        button = findViewById(R.id.Button_Area);
+        button = findViewById(R.id.Area_button);
         HomePage = findViewById(R.id.home_Home);
         LavoraConNoi = findViewById(R.id.lavora_Home);
         AdottaOra = findViewById(R.id.adotta_Home);
@@ -101,6 +108,13 @@ public class AreaActivity extends Activity {
         Bundle extras = intent.getExtras();
         if(extras!=null)
             utente = (Utente) extras.getSerializable("Utente");
+    }
+
+    private void inviaUtente(Utente utente) {
+        Bundle extras = new Bundle();
+        extras.putSerializable("Utente",utente);
+        intent.putExtras(extras);
+        startActivity(intent);
     }
 
 }
