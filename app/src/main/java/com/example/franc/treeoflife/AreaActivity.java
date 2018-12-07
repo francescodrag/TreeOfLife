@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.logging.Logger;
+
 public class AreaActivity extends Activity {
 
     Button HomePage, LavoraConNoi, AdottaOra, Logout;
@@ -24,7 +26,6 @@ public class AreaActivity extends Activity {
 
         setupView();
         getUtente();
-
 
         Nome.setText(utente.getNome());
         Nome.setTextSize(25);
