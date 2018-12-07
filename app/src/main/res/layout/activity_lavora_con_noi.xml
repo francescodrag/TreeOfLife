@@ -16,14 +16,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/logo_Home"
+            android:id="@+id/logo_LavoraConNoi"
             android:layout_width="26dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
             android:src="@mipmap/ic_launcher" />
 
         <Button
-            android:id="@+id/home_Home"
+            android:id="@+id/home_LavoraConNoi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -33,7 +33,7 @@
             android:text="Home" />
 
         <Button
-            android:id="@+id/lavora_Home"
+            android:id="@+id/lavora_LavoraConNoi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -41,10 +41,10 @@
             android:background="#0F5709"
             android:fontFamily="sans-serif"
             android:text="Lavora con noi"
-            android:textColor="#0624D6"/>
+            android:textColor="#0624D6" />
 
         <Button
-            android:id="@+id/adotta_Home"
+            android:id="@+id/adotta_LavoraConNoi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -55,7 +55,7 @@
             android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/area_Home"
+            android:id="@+id/area_LavoraConNoi"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -241,7 +241,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/diventaVolontario_LavoraConNoi"
         android:layout_width="225dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
@@ -263,13 +263,14 @@
         android:layout_height="42dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="152dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="8dp"
         android:text="CLICCA IL PULSANTE PER DIVENTARE UN SOSTENITORE VOLONTARIO"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout9"
         app:layout_constraintVertical_bias="1.0" />
