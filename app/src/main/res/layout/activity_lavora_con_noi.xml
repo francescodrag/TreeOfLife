@@ -268,7 +268,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginBottom="8dp"
         android:text="CLICCA IL PULSANTE PER DIVENTARE UN SOSTENITORE VOLONTARIO"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/Logout_Area"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"

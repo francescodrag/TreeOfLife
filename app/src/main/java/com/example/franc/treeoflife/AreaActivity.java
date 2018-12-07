@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class AreaActivity extends Activity {
 
-    Button HomePage, LavoraConNoi, AdottaOra;
+    Button HomePage, LavoraConNoi, AdottaOra, Logout;
     ImageView Area, Logo;
     Utente utente;
     TextView Nome, Cognome;
@@ -63,6 +63,14 @@ public class AreaActivity extends Activity {
                 inviaUtente(utente);
             }
         });
+
+        Logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent=new Intent(AreaActivity.this,LoginActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @SuppressLint("SetTextI18n")
@@ -101,6 +109,7 @@ public class AreaActivity extends Activity {
         AdottaOra = findViewById(R.id.adotta_Home);
         Area = findViewById(R.id.area_Home);
         Logo = findViewById(R.id.logo_Home);
+        Logout=findViewById(R.id.Logout_Area);
     }
 
     private void getUtente(){

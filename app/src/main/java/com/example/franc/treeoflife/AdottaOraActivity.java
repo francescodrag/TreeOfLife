@@ -11,6 +11,8 @@ public class AdottaOraActivity extends Activity {
 
     Button HomePage, LavoraConNoi, Adotta;
     ImageView Area, Logo;
+    Utente utente;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,32 +20,37 @@ public class AdottaOraActivity extends Activity {
         setContentView(R.layout.activity_adotta_ora);
 
         setupView();
+        getUtente();
 
         LavoraConNoi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AdottaOraActivity.this, LavoraConNoiActivity.class));
+                intent=new Intent(AdottaOraActivity.this, LavoraConNoiActivity.class);
+                inviaUtente(utente);
             }
         });
 
         HomePage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AdottaOraActivity.this, HomeActivity.class));
+                intent=new Intent(AdottaOraActivity.this, HomeActivity.class);
+                inviaUtente(utente);
             }
         });
 
         Logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AdottaOraActivity.this, HomeActivity.class));
+                intent=new Intent(AdottaOraActivity.this, HomeActivity.class);
+                inviaUtente(utente);
             }
         });
 
         Area.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AdottaOraActivity.this, AreaActivity.class));
+                intent=new Intent(AdottaOraActivity.this, AreaActivity.class);
+                inviaUtente(utente);
             }
         });
 
@@ -62,5 +69,18 @@ public class AdottaOraActivity extends Activity {
         Adotta = findViewById(R.id.adottaOra_Adotta);
         Area = findViewById(R.id.area_Adotta);
         Logo = findViewById(R.id.logo_Adotta);
+    }
+    private void getUtente(){
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+        if(extras!=null)
+            utente = (Utente) extras.getSerializable("Utente");
+    }
+
+    private void inviaUtente(Utente utente) {
+        Bundle extras = new Bundle();
+        extras.putSerializable("Utente",utente);
+        intent.putExtras(extras);
+        startActivity(intent);
     }
 }

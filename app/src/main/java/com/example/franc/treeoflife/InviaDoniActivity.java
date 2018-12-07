@@ -11,6 +11,8 @@ public class InviaDoniActivity extends Activity {
 
     Button HomePage, LavoraConNoi, AdottaOra, InviaDoni;
     ImageView Area, Logo;
+    Utente utente;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,32 +20,45 @@ public class InviaDoniActivity extends Activity {
         setContentView(R.layout.activity_invia_doni);
 
         setupView();
+        getUtente();
 
         LavoraConNoi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(InviaDoniActivity.this, LavoraConNoiActivity.class));
+                intent=new Intent(InviaDoniActivity.this, LavoraConNoiActivity.class);
+                inviaUtente(utente);
             }
         });
 
-        HomePage.setOnClickListener(new View.OnClickListener() {
+        AdottaOra.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(InviaDoniActivity.this, HomeActivity.class));
+                intent=new Intent(InviaDoniActivity.this, AdottaOraActivity.class);
+                inviaUtente(utente);
             }
         });
 
         Logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(InviaDoniActivity.this, HomeActivity.class));
+                intent=new Intent(InviaDoniActivity.this, HomeActivity.class);
+                inviaUtente(utente);
             }
         });
 
         Area.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(InviaDoniActivity.this, AreaActivity.class));
+                intent=new Intent(InviaDoniActivity.this, AreaActivity.class);
+                inviaUtente(utente);
+            }
+        });
+
+        HomePage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent=new Intent(InviaDoniActivity.this, HomeActivity.class);
+                inviaUtente(utente);
             }
         });
 
@@ -69,5 +84,19 @@ public class InviaDoniActivity extends Activity {
         Area = findViewById(R.id.area_InviaDoni);
         Logo = findViewById(R.id.logo_InviaDoni);
         AdottaOra = findViewById(R.id.adotta_InviaDoni);
+    }
+
+    private void getUtente(){
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+        if(extras!=null)
+            utente = (Utente) extras.getSerializable("Utente");
+    }
+
+    private void inviaUtente(Utente utente) {
+        Bundle extras = new Bundle();
+        extras.putSerializable("Utente",utente);
+        intent.putExtras(extras);
+        startActivity(intent);
     }
 }
