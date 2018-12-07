@@ -28,6 +28,13 @@ public class AreaActivity extends Activity {
         Cognome.setTextSize(25);
         checkButton(utente);
 
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AreaActivity.this, LeMieAdozioniActivity.class));
+            }
+        });
+
     }
 
     @SuppressLint("SetTextI18n")
@@ -44,13 +51,6 @@ public class AreaActivity extends Activity {
         }else{
             button.setText("Le Mie Adozioni Attive");
             button.setTextSize(25);
-            button.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                }
-            });
-
         }
     }
 
