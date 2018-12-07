@@ -14,7 +14,7 @@ public class HomeActivity extends Activity {
     Utente utente;
     Button HomePage, LavoraConNoi, AdottaOra;
     ImageView Area, Logo;
-    TextView Contatti, Aiuto, Faq;
+    TextView Contatti;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,39 +29,18 @@ public class HomeActivity extends Activity {
         LavoraConNoi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(HomeActivity.this, LavoraConNoiActivity.class));
             }
         });
 
         AdottaOra.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(HomeActivity.this, AdottaOraActivity.class));
             }
         });
 
         Contatti.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-        Aiuto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-        Faq.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-        Logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -83,8 +62,6 @@ public class HomeActivity extends Activity {
         LavoraConNoi = findViewById(R.id.lavora_Home);
         AdottaOra = findViewById(R.id.adotta_Home);
         Contatti = findViewById(R.id.contatti_Home);
-        Aiuto = findViewById(R.id.aiuto_Home);
-        Faq = findViewById(R.id.faq_Home);
         Area = findViewById(R.id.area_Home);
         Logo = findViewById(R.id.logo_Home);
     }

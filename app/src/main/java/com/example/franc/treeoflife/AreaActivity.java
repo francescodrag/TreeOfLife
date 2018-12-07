@@ -6,10 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class AreaActivity extends Activity {
 
+    Button HomePage, LavoraConNoi, AdottaOra;
+    ImageView Area, Logo;
     Utente utente;
     TextView Nome, Cognome;
     Button button;
@@ -28,10 +31,36 @@ public class AreaActivity extends Activity {
         Cognome.setTextSize(25);
         checkButton(utente);
 
+        LavoraConNoi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AreaActivity.this, LavoraConNoiActivity.class));
+            }
+        });
 
+        AdottaOra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AreaActivity.this, AdottaOraActivity.class));
+            }
+        });
+
+        Logo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AreaActivity.this, HomeActivity.class));
+            }
+        });
+
+        HomePage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AreaActivity.this, HomeActivity.class));
+            }
+        });
     }
 
-
+    @SuppressLint("SetTextI18n")
     private void checkButton(Utente utente){
         if(utente.getTipo().equals("M")){
             button.setText("Richiedi fondi");
@@ -39,7 +68,7 @@ public class AreaActivity extends Activity {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    startActivity(new Intent(AreaActivity.this, RichiediFondiActivity.class));
                 }
             });
         }else{
@@ -60,6 +89,11 @@ public class AreaActivity extends Activity {
         Nome = findViewById(R.id.nome_Area);
         Cognome = findViewById(R.id.cognome_Area);
         button = findViewById(R.id.Button_Area);
+        HomePage = findViewById(R.id.home_Home);
+        LavoraConNoi = findViewById(R.id.lavora_Home);
+        AdottaOra = findViewById(R.id.adotta_Home);
+        Area = findViewById(R.id.area_Home);
+        Logo = findViewById(R.id.logo_Home);
     }
 
     private void getUtente(){
