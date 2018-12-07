@@ -1,15 +1,18 @@
 package com.example.franc.treeoflife;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class AreaActivity extends Activity {
 
     Utente utente;
     TextView Nome, Cognome;
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,13 +26,38 @@ public class AreaActivity extends Activity {
         Nome.setTextSize(25);
         Cognome.setText(utente.getCognome());
         Cognome.setTextSize(25);
-        //Toast.makeText(AreaActivity.this, "Benvenuto, "+utente.getNome()+" "+utente.getCognome()+".", Toast.LENGTH_LONG).show();
+        checkButton(utente);
 
+    }
+
+    @SuppressLint("SetTextI18n")
+    private void checkButton(Utente utente){
+        if(utente.getTipo().equals("M")){
+            button.setText("Richiedi fondi");
+            button.setTextSize(25);
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                }
+            });
+        }else{
+            button.setText("Le Mie Adozioni Attive");
+            button.setTextSize(25);
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                }
+            });
+
+        }
     }
 
     private void setupView(){
         Nome = findViewById(R.id.nome_Area);
         Cognome = findViewById(R.id.cognome_Area);
+        button = findViewById(R.id.button_Area);
     }
 
     private void getUtente(){
