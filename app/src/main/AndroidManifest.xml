@@ -21,7 +21,8 @@
         <activity android:name=".AdottaOraActivity" />
         <activity android:name=".LeMieAdozioniActivity" />
         <activity android:name=".LavoraConNoiActivity" />
-        <activity android:name=".RichiediFondiActivity"></activity>
+        <activity android:name=".RichiediFondiActivity" />
+        <activity android:name=".InviaDoniActivity"></activity>
     </application>
 
 </manifest>
