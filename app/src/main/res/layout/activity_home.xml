@@ -16,14 +16,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/logo_home"
+            android:id="@+id/logo_Home"
             android:layout_width="26dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
             android:src="@mipmap/ic_launcher" />
 
         <Button
-            android:id="@+id/buttonHome_Home"
+            android:id="@+id/home_Home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -34,7 +34,7 @@
             android:textColor="#0624D6" />
 
         <Button
-            android:id="@+id/buttonLavora_Home"
+            android:id="@+id/lavora_Home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -44,7 +44,7 @@
             android:text="Lavora con noi" />
 
         <Button
-            android:id="@+id/buttonAdotta_Home"
+            android:id="@+id/adotta_Home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -55,7 +55,7 @@
             android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/omino_Home"
+            android:id="@+id/area_Home"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -114,14 +114,10 @@
 
     <LinearLayout
         android:id="@+id/linearLayout4"
-        android:layout_width="377dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -136,7 +132,7 @@
             android:textColor="#0624D6" />
 
         <TextView
-            android:id="@+id/Aiuto_Home"
+            android:id="@+id/aiuto_Home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -145,7 +141,7 @@
             android:textColor="#0624D6" />
 
         <TextView
-            android:id="@+id/Faq_Home"
+            android:id="@+id/faq_Home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
