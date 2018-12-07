@@ -11,39 +11,45 @@ public class LavoraConNoiActivity extends Activity {
 
     Button HomePage, DiventaVolontario, AdottaOra;
     ImageView Area, Logo;
-
+    Utente utente;
+    Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lavora_con_noi);
 
         setupView();
+        getUtente();
 
         HomePage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LavoraConNoiActivity.this, HomeActivity.class));
+                intent=new Intent(LavoraConNoiActivity.this, HomeActivity.class);
+                inviaUtente(utente);
             }
         });
 
         Logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LavoraConNoiActivity.this, HomeActivity.class));
+                intent= new Intent(LavoraConNoiActivity.this, HomeActivity.class);
+                inviaUtente(utente);
             }
         });
 
         Area.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LavoraConNoiActivity.this, AreaActivity.class));
+                intent=new Intent(LavoraConNoiActivity.this, AreaActivity.class);
+                inviaUtente(utente);
             }
         });
 
         AdottaOra.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LavoraConNoiActivity.this, AdottaOraActivity.class));
+                intent=new Intent(LavoraConNoiActivity.this, AdottaOraActivity.class);
+                inviaUtente(utente);
             }
         });
 
@@ -61,5 +67,18 @@ public class LavoraConNoiActivity extends Activity {
         AdottaOra = findViewById(R.id.adotta_LavoraConNoi);
         Area = findViewById(R.id.area_LavoraConNoi);
         Logo = findViewById(R.id.logo_LavoraConNoi);
+    }
+    private void getUtente(){
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+        if(extras!=null)
+            utente = (Utente) extras.getSerializable("Utente");
+    }
+
+    private void inviaUtente(Utente utente) {
+        Bundle extras = new Bundle();
+        extras.putSerializable("Utente",utente);
+        intent.putExtras(extras);
+        startActivity(intent);
     }
 }

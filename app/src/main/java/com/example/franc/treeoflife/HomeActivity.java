@@ -15,7 +15,7 @@ public class HomeActivity extends Activity {
     Button HomePage, LavoraConNoi, AdottaOra;
     ImageView Area, Logo;
     TextView Contatti;
-
+    Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,27 +29,31 @@ public class HomeActivity extends Activity {
         LavoraConNoi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this, LavoraConNoiActivity.class));
+                intent = new Intent(HomeActivity.this, LavoraConNoiActivity.class);
+                inviaUtente(utente);
             }
         });
 
         AdottaOra.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this, AdottaOraActivity.class));
+                intent = new Intent(HomeActivity.this, AdottaOraActivity.class);
+                inviaUtente(utente);
             }
         });
 
         Contatti.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                intent=new Intent(HomeActivity.this,ContattiActivity.class);
+                inviaUtente(utente);
             }
         });
 
         Area.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                intent = new Intent(HomeActivity.this, AreaActivity.class);
                 inviaUtente(utente);
             }
         });
@@ -74,7 +78,6 @@ public class HomeActivity extends Activity {
         }
 
     private void inviaUtente(Utente utente) {
-        Intent intent = new Intent(HomeActivity.this, AreaActivity.class);
         Bundle extras = new Bundle();
         extras.putSerializable("Utente",utente);
         intent.putExtras(extras);
