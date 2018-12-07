@@ -1,12 +1,12 @@
 package com.example.franc.treeoflife;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class AreaActivity extends Activity {
 
@@ -30,6 +30,7 @@ public class AreaActivity extends Activity {
 
     }
 
+    @SuppressLint("SetTextI18n")
     private void checkButton(Utente utente){
         if(utente.getTipo().equals("M")){
             button.setText("Richiedi fondi");
