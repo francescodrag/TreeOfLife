@@ -18,9 +18,10 @@
         </activity>
         <activity android:name=".HomeActivity" />
         <activity android:name=".AreaActivity" />
-        <activity android:name=".AdottaOraActivity"/>
-        <activity android:name=".LeMieAdozioniActivity"></activity>
-        <activity android:name=".LavoraConNoiActivity"></activity>
+        <activity android:name=".AdottaOraActivity" />
+        <activity android:name=".LeMieAdozioniActivity" />
+        <activity android:name=".LavoraConNoiActivity" />
+        <activity android:name=".RichiediFondiActivity"></activity>
     </application>
 
 </manifest>

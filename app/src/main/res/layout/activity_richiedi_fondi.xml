@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    tools:context=".RichiediFondiActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -30,8 +30,7 @@
             android:layout_weight="1"
             android:background="#0F5709"
             android:fontFamily="sans-serif"
-            android:text="Home"
-            android:textColor="#0624D6" />
+            android:text="Home" />
 
         <Button
             android:id="@+id/lavora_Home"
@@ -65,105 +64,68 @@
 
     <TextView
         android:id="@+id/titolo_RichiediFondi"
-        android:layout_width="wrap_content"
+        android:layout_width="142dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
         android:background="#0F5709"
-        android:text="Tree of Life"
+        android:text="Tree Of Life"
         android:textColor="@color/colorAccent"
-        android:textSize="36sp"
+        android:textSize="25sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
     <ImageView
-        android:id="@+id/foto_Home"
-        android:layout_width="366dp"
-        android:layout_height="239dp"
+        android:id="@+id/image_RichiediFondi"
+        android:layout_width="334dp"
+        android:layout_height="203dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:src="@mipmap/bambinohome"
+        android:src="@mipmap/bimbibelli"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titolo_RichiediFondi" />
 
     <TextView
-        android:id="@+id/testo_Home"
-        android:layout_width="364dp"
-        android:layout_height="58dp"
+        android:id="@+id/textView9"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="344dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="A Natale fai un gesto d'amore Regala un futuro a un bambino  del Sud del mondo."
+        android:text="Stai aiutando una comunità e non hai i fondi necessari per comprare cibo e risorse utili per la sopravvivenza del popolo? Clicca qui per chiedere aiuto."
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintBottom_toTopOf="@+id/adottaOra_Adotta"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/foto_Home" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="0dp"
+    <Button
+        android:id="@+id/richiediFondi_RichiediFondi"
+        android:layout_width="173dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/linear_background"
-        android:orientation="vertical"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="4dp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:visibility="visible"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="24dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="Richiedi Fondi"
+        android:textSize="25sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <TextView
-            android:id="@+id/contatti_Home"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="Contatti"
-            android:textColor="#0624D6" />
-
-        <TextView
-            android:id="@+id/aiuto_Home"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="Serve Aiuto?"
-            android:textColor="#0624D6" />
-
-        <TextView
-            android:id="@+id/faq_Home"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="F.A.Q"
-            android:textColor="#0624D6" />
-    </LinearLayout>
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
