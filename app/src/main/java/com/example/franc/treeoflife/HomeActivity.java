@@ -16,6 +16,9 @@ public class HomeActivity extends Activity {
     ImageView Area, Logo;
     TextView Contatti;
     Intent intent;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +27,7 @@ public class HomeActivity extends Activity {
         setupView();
         getUtente();
 
-        Toast.makeText(HomeActivity.this, "Benvenuto, "+utente.getNome()+" "+utente.getCognome()+".", Toast.LENGTH_LONG).show();
+
 
         LavoraConNoi.setOnClickListener(new View.OnClickListener() {
             @Override

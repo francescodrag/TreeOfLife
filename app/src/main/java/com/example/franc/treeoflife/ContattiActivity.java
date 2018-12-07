@@ -50,6 +50,14 @@ public class ContattiActivity extends Activity {
                 inviaUtente(utente);
             }
         });
+
+        HomePage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent=new Intent(ContattiActivity.this,HomeActivity.class);
+                inviaUtente(utente);
+            }
+        });
     }
 
     private void setupView() {
