@@ -22,7 +22,8 @@
         <activity android:name=".LeMieAdozioniActivity" />
         <activity android:name=".LavoraConNoiActivity" />
         <activity android:name=".RichiediFondiActivity" />
-        <activity android:name=".InviaDoniActivity"></activity>
+        <activity android:name=".InviaDoniActivity" />
+        <activity android:name=".OrganizzaIncontroActivity"></activity>
     </application>
 
 </manifest>
