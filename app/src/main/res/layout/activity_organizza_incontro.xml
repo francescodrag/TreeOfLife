@@ -160,7 +160,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editText9"
+            android:id="@+id/periodo_OrganizzaIncontro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -192,7 +192,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editText10"
+            android:id="@+id/luogo_OrganizzaIncontro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -201,7 +201,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/organizzaIncontro_OrganizzaIncontro"
         android:layout_width="185dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
