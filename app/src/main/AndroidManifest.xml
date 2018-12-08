@@ -24,7 +24,8 @@
         <activity android:name=".RichiediFondiActivity" />
         <activity android:name=".InviaDoniActivity" />
         <activity android:name=".OrganizzaIncontroActivity" />
-        <activity android:name=".ContattiActivity"></activity>
+        <activity android:name=".ContattiActivity" />
+        <activity android:name=".AdottaOra2Activity"></activity>
     </application>
 
 </manifest>

@@ -9,6 +9,7 @@ import android.app.FragmentTransaction;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class AdottaOraActivity extends Activity {
 
@@ -57,12 +58,16 @@ public class AdottaOraActivity extends Activity {
             }
         });
 
+
         Adotta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //startFragment();
+                intent=new Intent(AdottaOraActivity.this, AdottaOra2Activity.class);
+                inviaUtente(utente);
             }
         });
+
+
 
     }
 
@@ -73,6 +78,7 @@ public class AdottaOraActivity extends Activity {
         Area = findViewById(R.id.area_Adotta);
         Logo = findViewById(R.id.logo_Adotta);
     }
+
     private void getUtente(){
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
@@ -86,15 +92,5 @@ public class AdottaOraActivity extends Activity {
         intent.putExtras(extras);
         startActivity(intent);
     }
-/*
-    private void startFragment(View view){
-        if(view == findViewById(R.id.adottaOra_Adotta));
-        Fragment fragment;
-        fragment = new AdottaOraIntroFragment();
-        FragmentManager fm = getFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
-        ft.replace(R.id.AdottaOraIntroFragment, fragment);
-        ft.commit();
-    }
-    */
+
 }
