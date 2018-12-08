@@ -3,6 +3,9 @@ package com.example.franc.treeoflife;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -57,7 +60,7 @@ public class AdottaOraActivity extends Activity {
         Adotta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                //startFragment();
             }
         });
 
@@ -83,4 +86,15 @@ public class AdottaOraActivity extends Activity {
         intent.putExtras(extras);
         startActivity(intent);
     }
+/*
+    private void startFragment(View view){
+        if(view == findViewById(R.id.adottaOra_Adotta));
+        Fragment fragment;
+        fragment = new AdottaOraIntroFragment();
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.replace(R.id.AdottaOraIntroFragment, fragment);
+        ft.commit();
+    }
+    */
 }
