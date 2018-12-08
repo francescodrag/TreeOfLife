@@ -102,7 +102,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/colli_InviaDoni"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -134,7 +134,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editText4"
+            android:id="@+id/peso_InviaDoni"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -166,7 +166,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editText6"
+            android:id="@+id/altezza_InviaDoni"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -198,7 +198,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editText7"
+            android:id="@+id/larghezza_InviaDoni"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -230,7 +230,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editText8"
+            android:id="@+id/data_InviaDoni"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -262,7 +262,7 @@
             android:textStyle="bold" />
 
         <MultiAutoCompleteTextView
-            android:id="@+id/multiAutoCompleteTextView"
+            android:id="@+id/biglietto_InviaDoni"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
