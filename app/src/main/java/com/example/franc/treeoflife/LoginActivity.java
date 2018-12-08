@@ -5,9 +5,11 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class LoginActivity extends Activity {
@@ -62,6 +64,11 @@ public class LoginActivity extends Activity {
         {
             Utente volontario = new Utente("Francesco", "Napolitano", "V");//V=sostenitore volontario
             inviaUtente(volontario);
+        }
+        else {
+            progressBar.setVisibility(View.INVISIBLE);
+            Toast.makeText(LoginActivity.this,"credenziali errate",Toast.LENGTH_LONG).show();
+
         }
     }
 
