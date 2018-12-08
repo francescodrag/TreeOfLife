@@ -95,7 +95,8 @@ public class InviaDoniActivity extends Activity {
         AdottaOra.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(InviaDoniActivity.this, AdottaOraActivity.class));
+                intent=new Intent(InviaDoniActivity.this, AdottaOraActivity.class);
+                inviaUtente(utente);
             }
         });
     }
