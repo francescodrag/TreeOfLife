@@ -8,10 +8,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class RichiediFondiActivity extends Activity {
-    Button HomePage, LavoraConNoi, AdottaOra;
+    Button HomePage, LavoraConNoi, AdottaOra, RichiediFondi;
     ImageView Area, Logo;
     Utente utente;
     Intent intent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,10 +52,19 @@ public class RichiediFondiActivity extends Activity {
                 inviaUtente(utente);
             }
         });
+
         LavoraConNoi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 intent=new Intent(RichiediFondiActivity.this, LavoraConNoiActivity.class);
+                inviaUtente(utente);
+            }
+        });
+
+        RichiediFondi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent=new Intent(RichiediFondiActivity.this, RichiediFondi2Activity.class);
                 inviaUtente(utente);
             }
         });
@@ -66,6 +76,7 @@ public class RichiediFondiActivity extends Activity {
         AdottaOra = findViewById(R.id.adotta_Home);
         Area = findViewById(R.id.area_Home);
         Logo = findViewById(R.id.logo_Home);
+        RichiediFondi = findViewById(R.id.richiediFondi_RichiediFondi);
     }
 
     private void getUtente(){

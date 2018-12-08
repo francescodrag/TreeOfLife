@@ -20,7 +20,8 @@
             android:layout_width="26dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="TODO" />
 
         <Button
             android:id="@+id/home_LavoraConNoi"
@@ -233,7 +234,7 @@
 
         <EditText
             android:id="@+id/motivo_LavoraConNoi"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
@@ -263,16 +264,13 @@
         android:layout_height="42dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="152dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="8dp"
         android:text="CLICCA IL PULSANTE PER DIVENTARE UN SOSTENITORE VOLONTARIO"
-        app:layout_constraintBottom_toTopOf="@+id/Logout_Area"
+        app:layout_constraintBottom_toTopOf="@+id/diventaVolontario_LavoraConNoi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout9"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
